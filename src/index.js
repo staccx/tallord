@@ -1,7 +1,7 @@
 import {BILLION, HUNDRED, MILLION, TEN, THOUSAND, TRILLION, TWENTY} from "./constants";
 import nb from "./i18n/nb"
 
-export const tallord = (number, locale, current = "", shouldUseEtt = false) => {
+const tallord = (number, locale, current = "", shouldUseEtt = false) => {
   const numberValue = parseInt(number, 10);
 
   if(numberValue >= TRILLION) {
@@ -72,3 +72,5 @@ export const tallord = (number, locale, current = "", shouldUseEtt = false) => {
   return tallord(remainder, locale,  current + word);
 
 };
+
+export default tallord

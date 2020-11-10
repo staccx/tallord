@@ -1,4 +1,4 @@
-import {tallord} from "../src"
+import tallord from "../src"
 import {TRILLION} from "../src/constants";
 import nn from "../src/i18n/nn";
 
@@ -100,6 +100,13 @@ describe("tallord", () => {
       const billion = 1000 * 1000 * 1000
       expect(tallord(1000, nn)).toBe("eitt tusen")
       expect(tallord(2 * billion + 1, nn)).toBe("to milliardar og ein")
+    })
+    it("Override", () => {
+      expect(tallord(256, {
+        ...nn,
+        baseSeparator: "-",
+        tenSeparator: () => "-"
+      })).toBe("to-hundre-femtiseks")
     })
   })
 
