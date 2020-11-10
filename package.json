@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest --watchAll",
     "build": "babel src -d lib",
-    "prepare": "yarn test",
+    "prepare": "jest",
     "prepublishOnly": "yarn build"
   },
   "files": ["lib"],
