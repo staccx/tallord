@@ -1,0 +1,20 @@
+{
+  "name": "tallord",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "jsnext:main": "lib/index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "build": "babel src -d lib",
+    "prepare": "yarn test",
+    "prepublishOnly": "yarn build"
+  },
+  "files": ["lib"],
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "jest": "^26.6.3"
+  }
+}
