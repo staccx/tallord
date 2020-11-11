@@ -1,4 +1,4 @@
-import tallord from "../src"
+import {tallord} from "../src/tallord"
 import {TRILLION} from "../src/constants";
 import nn from "../src/i18n/nn";
 
