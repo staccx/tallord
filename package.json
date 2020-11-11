@@ -4,6 +4,7 @@
   "license": "MIT",
   "main": "lib/index.js",
   "jsnext:main": "lib/index.js",
+  "repository": "git@github.com:staccx/tallord.git",
   "scripts": {
     "test": "jest --watchAll",
     "build": "babel src -d lib",
