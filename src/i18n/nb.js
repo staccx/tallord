@@ -43,4 +43,5 @@ const nb = {
   billion: "milliard",
   billion_plural: "milliarder"
 }
-modules.exports = nb
+
+module.exports = nb
