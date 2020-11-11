@@ -1,6 +1,6 @@
 {
   "name": "tallord",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "lib/index.js",
   "jsnext:main": "lib/index.js",
@@ -10,7 +10,9 @@
     "prepare": "jest",
     "prepublishOnly": "yarn build"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
