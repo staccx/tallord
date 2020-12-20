@@ -1,5 +1,5 @@
 import {BILLION, HUNDRED, MILLION, TEN, THOUSAND, TRILLION, TWENTY} from "./constants";
-import nb from "./i18n/nb";
+import {nb} from "./i18n/nb";
 
 export const tallord = (number, locale, current = "", shouldUseEtt = false) => {
   const numberValue = parseInt(number, 10);

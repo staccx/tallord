@@ -1,4 +1,4 @@
-const nb = {
+export const nb = {
   baseSeparator: " ",
   tenSeparator: remainder => remainder > 0 ? " og " : "",
   endSeparator: remainder => remainder > 0 ? remainder < 99 ? " og " : ", " : "",
@@ -43,5 +43,3 @@ const nb = {
   billion: "milliard",
   billion_plural: "milliarder"
 }
-
-module.exports = nb

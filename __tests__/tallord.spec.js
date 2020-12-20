@@ -1,7 +1,7 @@
 import {tallord} from "../src/tallord"
 import {TRILLION} from "../src/constants";
-import nn from "../src/i18n/nn";
-import nb from "../src/i18n/nb";
+import {nn} from "../src/i18n/nn";
+import {nb} from "../src/i18n/nb";
 
 describe("tallord", () => {
   it("0-19", () => {

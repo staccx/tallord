@@ -1,3 +1,3 @@
-const {tallord} = require("./tallord")
+import {tallord} from "./tallord"
 
-module.exports = tallord
+export default tallord
