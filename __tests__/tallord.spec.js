@@ -1,6 +1,7 @@
 import {tallord} from "../src/tallord"
 import {TRILLION} from "../src/constants";
 import nn from "../src/i18n/nn";
+import nb from "../src/i18n/nb";
 
 describe("tallord", () => {
   it("0-19", () => {
@@ -107,6 +108,32 @@ describe("tallord", () => {
         baseSeparator: "-",
         tenSeparator: () => "-"
       })).toBe("to-hundre-femtiseks")
+    })
+  })
+
+
+  describe("Change options", () => {
+    it("Seperator", () => {
+      const billion = 1000 * 1000 * 1000
+      expect(tallord(1000, {
+        ...nb,
+        tenSeparator: () => "",
+        baseSeparator: "",
+        endSeparator: () => ""
+      })).toBe("etttusen")
+      expect(tallord(2 * billion + 1, {
+        ...nb,
+        tenSeparator: () => "",
+        baseSeparator: "",
+        endSeparator: () => ""
+      })).toBe("tomilliarderén")
+
+      expect(tallord(billion + 101, {
+        ...nb,
+        tenSeparator: remainder => remainder > 0 ? "-og-" : "-",
+        baseSeparator: "-",
+        endSeparator: () => "-"
+      })).toBe("én-milliard-ett-hundre-og-én")
     })
   })
 
